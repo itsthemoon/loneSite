@@ -1,0 +1,131 @@
+
+* {
+    font-size: 100%;
+    font-family: "Work Sans",sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    color: white
+}
+
+h1 {
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    font-size: x-large;
+}
+
+img {
+  margin: auto;
+  width: 80%;
+}
+
+body {
+background-color: black;
+}
+
+#navBar {
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-bottom: 10%;
+}
+
+#homepagepic {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-content: center;
+}
+
+
+a {
+    display: flex;
+}
+
+#signUpDiv {
+    display: flex;
+}
+
+#signUpBtn {
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    /* your CSS here */
+    #signUpBtn {
+        margin-left: auto;
+        margin-top: 80%;
+    }
+    }
+
+    .btn {
+        width: 180px;
+        height: 60px;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #ffffff;
+        outline: none;
+        transition: 1s ease-in-out;
+      }
+      
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        fill: none;
+        stroke: #fff;
+        stroke-dasharray: 150 480;
+        stroke-dashoffset: 150;
+        transition: 1s ease-in-out;
+      }
+      
+      .btn:hover {
+        transition: 1s ease-in-out;
+        background: #b5b1b1;
+      }
+      
+      .btn:hover svg {
+        stroke-dashoffset: -480;
+      }
+      
+      .btn span {
+        color: white;
+        font-size: 18px;
+        font-weight: 100;
+      }
+
+      img:hover, h2:hover, p:hover {
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.5s;
+      
+        /* When the animation is finished, start again */
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+      }
+
+      a:link {
+        text-decoration: none;
+      }
