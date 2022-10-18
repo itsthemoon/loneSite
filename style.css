@@ -13,14 +13,47 @@ h1 {
     justify-content: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 h2 {
     display: flex;
-    font-size: x-large;
+    font-size: xxx-large;
+    justify-content: center;
 }
 
 img {
   margin: auto;
   width: 80%;
+}
+
+p {
+    font-size: x-large
+}
+
+
+/* CSS */
+.button-2 {
+    margin-top: 100%;
+    background-color: rgb(0 0 0);
+    border-width: 7px;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 10px 48px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 body {
@@ -35,13 +68,41 @@ margin-bottom: 10%;
 flex-wrap: wrap;
 }
 
+#rightarrow {
+    width: 3%;
+}
+
 #homepagepic {
  display: flex;
- flex-direction: row;
+ flex-direction: column;
  justify-content: center;
  align-content: center;
 }
-
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .button-2:hover {
+    transition: 1s ease-in-out;
+    background: #b5b1b1;
+  }
+  
+  .button-2:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .button-2 span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
 
 a {
     display: flex;
@@ -66,6 +127,10 @@ html, body {
     #signUpBtn {
         margin-left: auto;
         margin-top: 80%;
+    }
+
+    .image {
+        margin-top: 20%
     }
     }
 
@@ -105,7 +170,7 @@ html, body {
         font-weight: 100;
       }
 
-      img:hover, h2:hover, p:hover {
+      h2:hover, p:hover {
         /* Start the shake animation and make the animation last for 0.5 seconds */
         animation: shake 0.5s;
       
@@ -130,3 +195,36 @@ html, body {
       a:link {
         text-decoration: none;
       }
+
+    
+.image {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    font-size: 16px;
+    padding: 16px 32px;
+  }
